@@ -14,7 +14,7 @@ public class PrimeWriter {
             ) {
             while(primeCount<numOfPrimes){
                 if(isPrime(currentNum)){
-                    stream.write(currentNum);
+                    stream.writeInt(currentNum);
                     primeCount++;
                 }
                 currentNum++;

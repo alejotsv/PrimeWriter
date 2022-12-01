@@ -11,7 +11,7 @@ public class PrimeReader {
                 DataInputStream stream = new DataInputStream(buffer);
                 ) {
             do {
-                prime = stream.read();
+                prime = stream.readInt();
                 if(prime != -1){
                     System.out.println(prime + " is prime.");
                 } else {
