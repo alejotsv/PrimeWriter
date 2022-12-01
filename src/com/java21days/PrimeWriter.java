@@ -3,11 +3,14 @@ package com.java21days;
 public class PrimeWriter {
 
     PrimeWriter(int numOfPrimes){
-        int num = 2;
-        for(int i=0; i<=numOfPrimes; i++){
-            if(isPrime(num)){
-                System.out.println(num);
+        int primeCount = 0;
+        int currentNum = 2;
+        while(primeCount<numOfPrimes){
+            if(isPrime(currentNum)){
+                System.out.println(currentNum + " is prime.");
+                primeCount++;
             }
+            currentNum++;
         }
     }
 
