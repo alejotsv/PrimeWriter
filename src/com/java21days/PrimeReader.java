@@ -12,12 +12,8 @@ public class PrimeReader {
                 ) {
             do {
                 prime = stream.readInt();
-                if(prime != -1){
-                    System.out.println(prime + " is prime.");
-                } else {
-                    stream.close();
-                }
-            } while (prime != -1);
+                System.out.println(prime + " is prime.");
+            } while (true);
 
         } catch (FileNotFoundException e){
             System.out.println("Exception: " + e.getMessage());

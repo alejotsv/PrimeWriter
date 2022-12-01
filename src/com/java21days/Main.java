@@ -2,7 +2,7 @@ package com.java21days;
 
 public class Main {
     public static void main(String[] args) {
-        new PrimeWriter(400);
+        new PrimeWriter(5);
         new PrimeReader();
     }
 }
