@@ -1,17 +1,31 @@
 package com.java21days;
 
+import java.io.*;
+
 public class PrimeWriter {
 
     PrimeWriter(int numOfPrimes){
         int primeCount = 0;
         int currentNum = 2;
-        while(primeCount<numOfPrimes){
-            if(isPrime(currentNum)){
-                System.out.println(currentNum + " is prime.");
-                primeCount++;
+        try (
+                FileOutputStream file = new FileOutputStream("400primes.dat");
+                BufferedOutputStream buffer = new BufferedOutputStream(file);
+                DataOutputStream stream = new DataOutputStream(buffer);
+            ) {
+            while(primeCount<numOfPrimes){
+                if(isPrime(currentNum)){
+                    stream.write(currentNum);
+                    primeCount++;
+                }
+                currentNum++;
             }
-            currentNum++;
+        } catch (FileNotFoundException e){
+            System.out.println("Exception: " + e.getMessage());
+        } catch (IOException e){
+            System.out.println("Exception: " + e.getMessage());
         }
+
+
     }
 
     boolean isPrime(int num){
