@@ -15,8 +15,6 @@ public class PrimeReader {
                 System.out.println(prime + " is prime.");
             } while (true);
 
-        } catch (FileNotFoundException e){
-            System.out.println("Exception: " + e.getMessage());
         } catch (EOFException e){
             System.out.println("File reading completed. " + e.getMessage());
         } catch (IOException e){

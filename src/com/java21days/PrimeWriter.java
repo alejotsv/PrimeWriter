@@ -19,9 +19,7 @@ public class PrimeWriter {
                 }
                 currentNum++;
             }
-            stream.close();
-        } catch (FileNotFoundException e){
-            System.out.println("Exception: " + e.getMessage());
+            buffer.close();
         } catch (IOException e){
             System.out.println("Exception: " + e.getMessage());
         }
